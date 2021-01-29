@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A09E88E20F3E5FA0043A6AC /* NoiseRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09E88D20F3E5FA0043A6AC /* NoiseRenderer.swift */; };
 		4A0EFB6020F13CB6003A4749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EFB5F20F13CB6003A4749 /* AppDelegate.swift */; };
 		4A0EFB6220F13CB6003A4749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EFB6120F13CB6003A4749 /* ViewController.swift */; };
 		4A0EFB6420F13CB8003A4749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EFB6320F13CB8003A4749 /* Assets.xcassets */; };
 		4A0EFB6720F13CB8003A4749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EFB6520F13CB8003A4749 /* Main.storyboard */; };
+		4A24BB3620F1FC2300C9F763 /* Pink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24BB3520F1FC2300C9F763 /* Pink.swift */; };
+		4A7F9D9220F26BA000DE3140 /* NoiseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F9D9120F26BA000DE3140 /* NoiseGenerator.swift */; };
+		4AE7CDA320F21AAE008CA418 /* LCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7CDA220F21AAE008CA418 /* LCG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A09E88D20F3E5FA0043A6AC /* NoiseRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseRenderer.swift; sourceTree = "<group>"; };
 		4A0EFB5C20F13CB6003A4749 /* noisier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noisier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0EFB5F20F13CB6003A4749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A0EFB6120F13CB6003A4749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +26,9 @@
 		4A0EFB6620F13CB8003A4749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A0EFB6820F13CB8003A4749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A0EFB6920F13CB8003A4749 /* noisier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = noisier.entitlements; sourceTree = "<group>"; };
+		4A24BB3520F1FC2300C9F763 /* Pink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pink.swift; sourceTree = "<group>"; };
+		4A7F9D9120F26BA000DE3140 /* NoiseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseGenerator.swift; sourceTree = "<group>"; };
+		4AE7CDA220F21AAE008CA418 /* LCG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCG.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			children = (
 				4A0EFB5E20F13CB6003A4749 /* noisier */,
 				4A0EFB5D20F13CB6003A4749 /* Products */,
+				4A0EFB6F20F13D14003A4749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +68,19 @@
 				4A0EFB6520F13CB8003A4749 /* Main.storyboard */,
 				4A0EFB6820F13CB8003A4749 /* Info.plist */,
 				4A0EFB6920F13CB8003A4749 /* noisier.entitlements */,
+				4A24BB3520F1FC2300C9F763 /* Pink.swift */,
+				4AE7CDA220F21AAE008CA418 /* LCG.swift */,
+				4A7F9D9120F26BA000DE3140 /* NoiseGenerator.swift */,
+				4A09E88D20F3E5FA0043A6AC /* NoiseRenderer.swift */,
 			);
 			path = noisier;
+			sourceTree = "<group>";
+		};
+		4A0EFB6F20F13D14003A4749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +115,11 @@
 				TargetAttributes = {
 					4A0EFB5B20F13CB6003A4749 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -133,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7F9D9220F26BA000DE3140 /* NoiseGenerator.swift in Sources */,
+				4A24BB3620F1FC2300C9F763 /* Pink.swift in Sources */,
 				4A0EFB6220F13CB6003A4749 /* ViewController.swift in Sources */,
+				4AE7CDA320F21AAE008CA418 /* LCG.swift in Sources */,
 				4A0EFB6020F13CB6003A4749 /* AppDelegate.swift in Sources */,
+				4A09E88E20F3E5FA0043A6AC /* NoiseRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,15 +298,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = noisier/noisier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z34J2E84YD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = noisier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kalifi.noisier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -288,15 +322,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = noisier/noisier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z34J2E84YD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = noisier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kalifi.noisier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -7,12 +7,17 @@
 //
 
 import Cocoa
+import AudioToolbox
 
 class ViewController: NSViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let noise = NoiseRenderer()
+        noise.createNoiseUnit()
+        AudioUnitInitialize(noise.noiseUnit!)
+        AudioOutputUnitStart(noise.noiseUnit!)
+        
         // Do any additional setup after loading the view.
     }
 
